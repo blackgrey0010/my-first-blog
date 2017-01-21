@@ -9,9 +9,13 @@
         </div>
 
         <div>
-         <p>published: 21.01.2017, 14:11</p>
-         <h2><a href="">Posting</a></h2>
-         <p>This is a blog post entry in the paragraph section.</p>
+            {%for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date}}</p>
+                    <h1><a href="">{{ post.title}}</a></h1>
+                    <p>{{ post.text|linebreaksbr}}</p>
+                </div>
+            {% endfor %}
         </div>
 
         <div>
